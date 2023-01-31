@@ -12,17 +12,17 @@ type Props = {
 
 const Home: FC<Props> = (props) => {
   return (
-    <>
+    <div>
       <h2>POSTの一覧</h2>
       <div>
-	{props.posts.map((post) =>
-	  <div>
+	{props.posts.map((post, index) =>
+	  <div key={index}>
 	    <div>{post.id}.</div>
 	    <div>{post.title}</div>
 	  </div>
         )}
       </div>
-    </>
+    </div>
   )
 }
 
